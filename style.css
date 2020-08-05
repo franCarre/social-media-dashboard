@@ -1,0 +1,208 @@
+.theme-light {
+  --color-bg: linear-gradient( hsl(225, 100%, 98%) 30%,hsl(225, 100%, 98%) 30%,hsl(0, 0%, 100%) 30%);
+  --color-card-bg: hsl(227, 47%, 96%);
+  --color-card-bg-hover: hsl(226, 32%, 92%);
+  --text-primary: hsl(230, 17%, 14%);
+  --text-secondary: hsl(228, 12%, 44%);
+}
+.theme-dark {
+  --color-bg: linear-gradient( hsl(232, 19%, 15%) 30%,hsl(232, 19%, 15%) 30%,hsl(230, 17%, 14%) 30%);
+  --color-card-bg: hsl(228, 28%, 20%);
+  --color-card-bg-hover: hsl(228, 20%, 24%);
+  --text-primary: hsl(0, 0%, 100%);
+  --text-secondary: hsl(228, 34%, 66%);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--text-primary);
+  cursor: default;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 30px 0;
+}
+
+small {
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.container {
+  margin-top: 70px;
+  position: relative;
+}
+
+.wrapper {
+  padding-right: 15px;
+}
+
+.followers {
+  background: var(--color-card-bg);
+  border: none;
+  cursor: pointer;
+  height: 200px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.followers:hover {
+  background: var(--color-card-bg-hover);
+}
+
+.followers-facebook {
+  border-top: 5px solid hsl(208, 92%, 53%);
+}
+
+.followers-twitter {
+  border-top: 5px solid hsl(203, 89%, 53%);
+}
+
+.followers-instagram {
+  border-top: 5px solid hsl(37, 97%, 70%);
+}
+
+.followers-youtube {
+  border-top: 5px solid hsl(348, 97%, 39%);
+}
+
+.followers-counter {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.username {
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.text-followers {
+  color: var(--text-secondary);
+  font-size: .7rem;
+  letter-spacing: .3rem;
+  margin-top: 0;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.text-green {
+  color: hsl(163, 72%, 41%);
+  font-size: .7rem;
+  font-weight: 700;
+}
+
+.text-red {
+  color: hsl(356, 69%, 56%);
+  font-size: .7rem;
+  font-weight: 700;
+}
+
+.overview {
+  background: var(--color-card-bg);
+  border: none;
+  cursor: pointer;
+  height: 120px;
+  padding: 15px 25px;
+}
+
+.overview:hover {
+  background: var(--color-card-bg-hover);
+}
+
+.overview-counter {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.overview-right  {
+  text-align: right;
+}
+
+.theme-switcher {
+  float: right;
+}
+
+.theme-switcher small {
+  margin-top: 2px;
+}
+
+.switch {
+  display: inline-block;
+  position: relative;
+  height: 24px;
+  margin-left: 20px;
+  width: 40px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  transition: 0.4s;
+}
+
+.slider:before {
+  background: var(--color-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: rgb(195, 201, 206);
+}
+
+input:checked + .slider:before {
+  background: var(--color-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateX(15px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+ 
+@media (max-width: 1000px) {
+  .theme-switcher  {
+    float: left;
+    margin-top: 20px;
+    padding-left: 15px;
+  }
+}

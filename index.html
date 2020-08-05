@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Social Media Dashboard</title>
+</head>
+<body>
+  <div class="container">
+    <div class="wrapper">
+    <div class="row">
+      <div class="col-lg-10">
+        <h1>Social Media Dashboard</h1>
+        <small>Total Followers: <span class="counter" data-target="23004">0</span></small>
+      </div>
+      <div class="col-lg-2">
+        <div class="row theme-switcher">
+          <small>Dark Mode </small>
+          <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    </div>
+    <br>
+    <div class="row row-cols-1 row-cols-md-4">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card followers followers-facebook">
+          <div class="card-body">
+            <p class="username"><img src="images/icon-facebook.svg" alt="twitter icon"> @nathanf</p>
+            <h3 class="counter followers-counter" data-target="1987">0</h3>
+
+            <p class="text-followers">Followers</p><br />
+            <p class="text-green"><img src="images/icon-up.svg"> <span class="counter" data-target="12">0</span> Today</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card followers followers-twitter">
+          <div class="card-body">
+            <p class="username"><img src="images/icon-twitter.svg" alt="twitter icon"> @nathanf</p>
+            <h3 class="counter followers-counter" data-target="1044">0</h3>
+            <p class="text-followers">Followers</p><br />
+            <p class="text-green"><img src="images/icon-up.svg"> <span class="counter" data-target="99">0</span> Today</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card followers followers-instagram">
+          <div class="card-body">
+            <p class="username"><img src="images/icon-instagram.svg" alt="twitter icon"> @realnathanf</p>
+            <h3 class="counter followers-counter" data-target="11000">0</h3>
+            <p class="text-followers">Followers</p><br />
+            <p class="text-green"><img src="images/icon-up.svg"> <span class="counter" data-target="1099">0</span> Today</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card followers followers-youtube">
+          <div class="card-body">
+            <p class="username"><img src="images/icon-youtube.svg" alt="twitter icon"> Nathan F.</p>
+            <h3 class="counter followers-counter" data-target="8239">0</h3>
+            <p class="text-followers">Followers</p><br />
+            <p class="text-red" ><img src="images/icon-down.svg"> <span class="counter" data-target="144">0</span> Today</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Overview - Today</h2>
+
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card overview overwiew-facebook">
+          <div class="row">
+            <div class="col-8"><small>Page Views</small></div>
+            <div class="col overview-right"><img src="images/icon-facebook.svg" alt="facebook icon"></div>
+          </div>
+          <div class="row mt-4">
+            <div class="col"><h4 class="counter overview-counter" data-target="87">0</h4></div>
+            <div class="col  overview-right mt-2"><p class="text-green"><img src="images/icon-up.svg"> <span class="counter" data-target="303">0</span>%</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card overview overwiew-facebook">
+          <div class="row">
+            <div class="col-8"><small>Likes</small></div>
+            <div class="col overview-right"><img src="images/icon-facebook.svg" alt="facebook icon"></div>
+          </div>
+          <div class="row mt-4">
+            <div class="col"><h4 class="counter overview-counter" data-target="52">0</h4></div>
+            <div class="col  overview-right mt-2"><p class="text-red"><img src="images/icon-down.svg"> <span class="counter" data-target="2">0</span>%</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card overview overwiew-instagram">
+          <div class="row">
+            <div class="col-8"><small>Likes</small></div>
+            <div class="col overview-right"><img src="images/icon-instagram.svg" alt="instagram icon"></div>
+          </div>
+          <div class="row mt-4">
+            <div class="col"><h4 class="counter overview-counter" data-target="5462">0</h4></div>
+            <div class="col overview-right mt-2"><p class="text-green"><img src="images/icon-up.svg"> <span class="counter" data-target="2257">0</span>%</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card overview overwiew-instagram">
+          <div class="row">
+            <div class="col-8"><small>Profile Views</small></div>
+            <div class="col overview-right"><img src="images/icon-instagram.svg" alt="instagram icon"></div>
+          </div>
+          <div class="row mt-4">
+            <div class="col"><h4 class="counter overview-counter" data-target="52000">0</h4></div>
+            <div class="col overview-right mt-2"><p class="text-green"><img src="images/icon-up.svg"> <span class="counter" data-target="1375">0</span>%</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card overview overwiew-twitter">
+          <div class="row">
+            <div class="col-8"><small>Retweets</small></div>
+            <div class="col overview-right"><img src="images/icon-twitter.svg" alt="twitter icon"></div>
+          </div>
+          <div class="row mt-4">
+            <div class="col"><h4 class="counter overview-counter" data-target="117">0</h4></div>
+            <div class="col overview-right mt-2"><p class="text-green"><img src="images/icon-up.svg"> <span class="counter" data-target="303">0</span>%</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card overview overwiew-twitter">
+          <div class="row">
+            <div class="col-8"><small>Likes</small></div>
+            <div class="col overview-right"><img src="images/icon-twitter.svg" alt="twitter icon"></div>
+          </div>
+          <div class="row mt-4">
+            <div class="col"><h4 class="counter overview-counter" data-target="507">0</h4></div>
+            <div class="col overview-right mt-2"><p class="text-green"><img src="images/icon-up.svg"> <span class="counter" data-target="553">0</span>%</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card overview overwiew-youtube">
+          <div class="row">
+            <div class="col-8"><small>Likes</small></div>
+            <div class="col overview-right"><img src="images/icon-youtube.svg" alt="youtube icon"></div>
+          </div>
+          <div class="row mt-4">
+            <div class="col"><h4 class="counter overview-counter" data-target="107">0</h4></div>
+            <div class="col overview-right mt-2"><p class="text-red"><img src="images/icon-down.svg"> <span class="counter" data-target="19">0</span>%</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card overview overwiew-youtube">
+          <div class="row">
+            <div class="col-8"><small>Total Views</small></div>
+            <div class="col overview-right"><img src="images/icon-youtube.svg" alt="youtube icon"></div>
+          </div>
+          <div class="row mt-4">
+            <div class="col"><h4 class="counter overview-counter" data-target="1407">0</h4></div>
+            <div class="col overview-right mt-2"><p class="text-red"><img src="images/icon-down.svg"> <span class="counter" data-target="12">0</span>%</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
